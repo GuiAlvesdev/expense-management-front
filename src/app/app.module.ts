@@ -7,31 +7,22 @@ import { AppComponent } from './app.component';
 
 
 
-import { NavbarComponent } from './navbar/navbar.component';
-import { PessoasPesquisaComponent } from './pessoas/pessoas-pesquisa/pessoas-pesquisa.component';
-
-import { PessoaCadastroComponent } from './pessoas/pessoa-cadastro/pessoa-cadastro.component';
-
-
-import { MessageComponent } from './message/message.component';
-
+import { CoreModule } from './core/core.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { PessoasModule } from './pessoas/pessoas.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-
-    NavbarComponent,
-    MessageComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
     LancamentosModule,
-    PessoasModule
+    PessoasModule,
+    CoreModule
 
   ],
   providers: [],

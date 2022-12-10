@@ -13,6 +13,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TooltipModule } from 'primeng/tooltip';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -24,6 +25,8 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
   imports: [
     CommonModule,
     FormsModule,
+
+    SharedModule,
 
     InputTextModule,
     ButtonModule,
