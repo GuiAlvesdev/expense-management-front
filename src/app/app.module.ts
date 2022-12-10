@@ -1,47 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
 
-import { CurrencyMaskModule } from "ng2-currency-mask";
-
-import {InputTextModule} from 'primeng/inputtext';
-import { TableModule } from 'primeng/table';
-import { TabViewModule } from 'primeng/tabview';
-import {ButtonModule} from 'primeng/button';
-import {TooltipModule} from 'primeng/tooltip';
-import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
-import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
+import { PessoasPesquisaComponent } from './pessoas/pessoas-pesquisa/pessoas-pesquisa.component';
+
+import { PessoaCadastroComponent } from './pessoas/pessoa-cadastro/pessoa-cadastro.component';
+
+
 import { MessageComponent } from './message/message.component';
+
+import { LancamentosModule } from './lancamentos/lancamentos.module';
+import { PessoasModule } from './pessoas/pessoas.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LancamentosPesquisaComponent,
+
     NavbarComponent,
-    PessoasPesquisaComponent,
-    LancamentoCadastroComponent,
-    PessoaCadastroComponent,
     MessageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    InputTextModule,
-    TableModule,
-    TabViewModule,
-    ButtonModule,
-    TooltipModule,
-    CurrencyMaskModule
+
+    LancamentosModule,
+    PessoasModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
