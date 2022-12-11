@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {ToastModule} from 'primeng/toast';
 
 
 import { CoreModule } from './core/core.module';
@@ -24,7 +25,10 @@ import { PessoasModule } from './pessoas/pessoas.module';
 
     LancamentosModule,
     PessoasModule,
-    CoreModule
+    CoreModule,
+
+    ToastModule
+
 
   ],
   providers: [],
