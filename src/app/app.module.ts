@@ -12,6 +12,7 @@ import {ToastModule} from 'primeng/toast';
 import { CoreModule } from './core/core.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { PessoasModule } from './pessoas/pessoas.module';
+import { MessageService } from 'primeng/api';
 
 
 @NgModule({
@@ -31,7 +32,9 @@ import { PessoasModule } from './pessoas/pessoas.module';
 
 
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
