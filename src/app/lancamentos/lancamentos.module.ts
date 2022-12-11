@@ -14,6 +14,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { TooltipModule } from 'primeng/tooltip';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,6 +26,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     FormsModule,
+    HttpClientModule,
 
     SharedModule,
 
