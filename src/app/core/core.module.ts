@@ -1,20 +1,47 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErrorHandlerService } from './error-handler.service';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
+registerLocaleData(localePt, 'pt-BR');
 
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [NavbarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+
+
+    ToastModule,
+    ConfirmDialogModule
+
+
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+
+    ToastModule,
+    ConfirmDialogModule
   ],
   providers: [
-    ErrorHandlerService
+    DatePipe,
+    ErrorHandlerService,
+
+    MessageService,
+    ConfirmationService,
+    TranslateService
   ]
 })
 export class CoreModule { }
