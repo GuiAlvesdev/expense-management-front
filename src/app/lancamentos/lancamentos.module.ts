@@ -41,11 +41,6 @@ import { HttpClientModule } from '@angular/common/http';
     DropdownModule,
     CurrencyMaskModule
   ],
-  exports: [
-
-    LancamentoCadastroComponent,
-    LancamentosPesquisaComponent
-
-  ]
+  exports: []
 })
 export class LancamentosModule { }

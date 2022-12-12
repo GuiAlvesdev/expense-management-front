@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
 
     SharedModule,
 
@@ -29,9 +31,6 @@ import { SharedModule } from '../shared/shared.module';
     InputMaskModule
 
   ],
-  exports: [
-    PessoaCadastroComponent,
-    PessoasPesquisaComponent
-  ]
+  exports: []
 })
 export class PessoasModule { }
