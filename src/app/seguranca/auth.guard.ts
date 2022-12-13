@@ -29,11 +29,11 @@ export class AuthGuard implements CanActivate {
             return false;
           }
 
-          return this.podeAcessarRota(next.data.roles);
+          return this.podeAcessarRota(next.data['roles']);
         });
     }
 
-    return this.podeAcessarRota(next.data.roles);
+    return this.podeAcessarRota(next.data['roles']);
   }
 
   podeAcessarRota(roles: string[]): boolean {

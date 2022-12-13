@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ConfirmationService, LazyLoadEvent, MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { ErrorHandlerService } from 'src/app/core/error-handler.service';
+import { AuthService } from 'src/app/seguranca/auth.service';
 import { LancamentoFiltro, LancamentoService } from '../lancamento.service';
 
 @Component({
