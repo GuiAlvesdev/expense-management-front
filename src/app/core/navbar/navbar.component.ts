@@ -8,5 +8,28 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   exibindoMenu: boolean = false;
+  usuarioLogado: string = ''
+
+  constructor(
+    private auth: AuthService,
+    private errorHandler: ErrorHandlerService,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+    this.usuarioLogado = this.auth.jwtPayload?.nome;
+  }
+
+  temPermissao(permissao: string) {
+    return this.auth.temPermissao(permissao);
+  }
+
+  logout() {
+    this.auth.logout()
+      .then(() => {
+        this.router.navigate(['/login']);
+      })
+      .catch(erro => this.errorHandler.handle(erro));
+  }
 
 }

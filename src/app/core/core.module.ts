@@ -1,3 +1,4 @@
+import { NaoAutorizadoComponent } from './nao-autorizado.component';
 import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
@@ -13,16 +14,10 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToastModule } from 'primeng/toast';
 
-
-
-
-import { NavbarComponent } from './navbar/navbar.component';
+import { AuthService } from './../seguranca/auth.service';
 import { ErrorHandlerService } from './error-handler.service';
+import { NavbarComponent } from './navbar/navbar.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
-import { AuthService } from '../seguranca/auth.service';
-
-
-
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -33,7 +28,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 @NgModule({
   declarations: [
     NavbarComponent,
-    PaginaNaoEncontradaComponent
+    PaginaNaoEncontradaComponent,
+    NaoAutorizadoComponent
   ],
   imports: [
     CommonModule,
@@ -54,17 +50,17 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     NavbarComponent,
 
     ToastModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
   ],
   providers: [
     DatePipe,
     ErrorHandlerService,
+    AuthService,
 
     MessageService,
     ConfirmationService,
-    AuthService,
     Title,
-    TranslateService
+    TranslateService,
   ]
 })
 export class CoreModule { }

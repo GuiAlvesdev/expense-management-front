@@ -90,6 +90,8 @@ export class PessoaCadastroComponent implements OnInit {
   atualizarTituloEdicao() {
     this.title.setTitle(`Edição de pessoa: ${this.pessoa.nome}`);
   }
+
+  
 }
 
 

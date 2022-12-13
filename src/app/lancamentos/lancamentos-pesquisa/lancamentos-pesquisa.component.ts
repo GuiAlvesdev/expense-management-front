@@ -20,6 +20,7 @@ export class LancamentosPesquisaComponent implements OnInit{
   @ViewChild('tabela') grid!: Table;
 
   constructor(
+    private auth: AuthService,
     private lancamentoService: LancamentoService,
     private errorHandler: ErrorHandlerService,
     private messageService: MessageService,
@@ -68,6 +69,10 @@ export class LancamentosPesquisaComponent implements OnInit{
 
         this.messageService.add({ severity: 'success', detail: 'Lançamento excluído com sucesso!' })
       })
+  }
+
+  naoTemPermissao(permissao: string) {
+    return !this.auth.temPermissao(permissao);
   }
 
 }

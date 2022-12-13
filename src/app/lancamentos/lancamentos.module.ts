@@ -15,6 +15,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LancamentosRoutingModule } from './lancamentos-routing.module';
 
 
 
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
 
     SharedModule,
+    LancamentosRoutingModule,
 
     InputTextModule,
     ButtonModule,

@@ -31,13 +31,14 @@ import { PessoasRoutingModule } from './pessoas-routing.module';
     RouterModule,
 
     SharedModule,
+    PessoasRoutingModule,
 
     InputTextModule,
     ButtonModule,
     TableModule,
     TooltipModule,
     InputMaskModule,
-    PessoasRoutingModule
+
 
   ],
   exports: []

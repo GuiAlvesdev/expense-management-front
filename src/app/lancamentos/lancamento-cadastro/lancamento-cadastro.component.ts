@@ -15,8 +15,6 @@ import { LancamentoService } from '../lancamento.service';
   styleUrls: ['./lancamento-cadastro.component.css']
 })
 export class LancamentoCadastroComponent implements OnInit {
-
-
   lancamento: Lancamento = new Lancamento();
 
   categorias: any[] = [];
