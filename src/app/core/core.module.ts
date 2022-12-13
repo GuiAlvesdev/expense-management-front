@@ -19,6 +19,7 @@ import { ToastModule } from 'primeng/toast';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErrorHandlerService } from './error-handler.service';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
+import { AuthService } from '../seguranca/auth.service';
 
 
 
@@ -61,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
     MessageService,
     ConfirmationService,
+    AuthService,
     Title,
     TranslateService
   ]

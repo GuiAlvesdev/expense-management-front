@@ -12,12 +12,14 @@ import {ToastModule} from 'primeng/toast';
 import { CoreModule } from './core/core.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { PessoasModule } from './pessoas/pessoas.module';
+import { SegurancaModule } from './seguranca/seguranca.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
 
   ],
   imports: [
@@ -28,6 +30,7 @@ import { PessoasModule } from './pessoas/pessoas.module';
     LancamentosModule,
     PessoasModule,
     CoreModule,
+    SegurancaModule,
 
     ToastModule
 
