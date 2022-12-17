@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-pagina-nao-encontrada',
   template: `
     <div class="container">
-      <h1 class="text-center">Página não encontrada</h1>
+      <h1 class="text-center">Ops! Página não encontrada</h1>
+      <img src="assets/chocado.png">
     <div>
   `,
   styles: []
