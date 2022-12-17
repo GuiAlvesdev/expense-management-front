@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -6,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {ToastModule} from 'primeng/toast';
 
 
 
@@ -28,12 +28,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    CoreModule ,
 
     LancamentosModule,
     PessoasModule,
     SegurancaModule,
 
-    ToastModule
+
 
 
   ],

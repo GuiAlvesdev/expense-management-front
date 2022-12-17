@@ -64,7 +64,7 @@ export class LancamentoService {
   }
 
   adicionar(lancamento: Lancamento): Promise<Lancamento> {
-    return this.http.post< Lancamento >(this.lancamentosUrl, lancamento).toPromise();
+    return this.http.post< Lancamento | any >(this.lancamentosUrl, lancamento).toPromise();
   }
 
   atualizar(lancamento: Lancamento): Promise<Lancamento> {
