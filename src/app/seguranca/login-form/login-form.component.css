@@ -1,13 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .container-father{
     display: flex;
-    background-color: blue;
     height: 100vh;
     
 }
 
 .container-text{
-    background-color: yellow;
+    background-color: blue;
     width: 50%;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+.father-text{
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    
+    
+    
+}
+
+.father-text h2 {
+    margin: 1rem;
+}
+
+
+
+.child-text{
+    margin-top: 20px;
+}
+
+
+.tecnologies{
+    margin: 40px;
+    color: white;
+   
+
+    
+}
+
+.tecnologies img {
+    margin: 20px;
 }
 
 
@@ -17,7 +60,7 @@
 
 
 .grid{
-    background-color: white;
+    background-color: black;
     margin: auto;
     text-align: center;
     height: 300px;
