@@ -1,0 +1,37 @@
+.container-father{
+    display: flex;
+    background-color: blue;
+    height: 100vh;
+    
+}
+
+.container-text{
+    background-color: yellow;
+    width: 50%;
+}
+
+
+.container-panel{
+    background-color: black;
+}
+
+
+.grid{
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    height: 300px;
+    width: 500px;
+}
+
+.container{
+    max-width: 400px;
+    margin: 150px;
+}
+
+.image{
+    text-align: center;
+    height: 200px;
+    width: 500px;
+    
+}
