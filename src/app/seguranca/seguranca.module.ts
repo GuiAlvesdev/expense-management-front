@@ -17,6 +17,7 @@ export function tokenGetter(): string {
 @NgModule({
   declarations: [
     LoginFormComponent
+
   ],
   imports: [
     CommonModule,
@@ -25,8 +26,8 @@ export function tokenGetter(): string {
     JwtModule.forRoot({
       config: {
         tokenGetter,
-        allowedDomains: environment.tokenAllowedDomains,
-        disallowedRoutes: environment.tokenDisallowedRoutes
+        allowedDomains: ['localhost:8080'],
+        disallowedRoutes: ['http://localhost:8080/oauth/token']
       }
     }),
 

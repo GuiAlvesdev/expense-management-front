@@ -18,14 +18,10 @@ export class LancamentoFiltro {
 })
 export class LancamentoService {
 
-  lancamentosUrl: string;
+  lancamentosUrl = 'http://localhost:8080/lancamentos';
 
-  constructor(
-    private http: HttpClient,
-    private datePipe: DatePipe
-  ) {
-    this.lancamentosUrl = `${environment.apiUrl}/lancamentos`
-  }
+  constructor(private http: HttpClient,
+    private datePipe: DatePipe) { }
 
   pesquisar(filtro: LancamentoFiltro): Promise<any> {
     let params = new HttpParams()

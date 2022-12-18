@@ -13,11 +13,9 @@ export class PessoaFiltro {
   providedIn: 'root'
 })
 export class PessoaService {
-  pessoasUrl: string
+  pessoasUrl = 'http://localhost:8080/pessoas';
 
-  constructor(private http: HttpClient) {
-    this.pessoasUrl = `${environment.apiUrl}/pessoas`
-  }
+  constructor(private http: HttpClient) { }
 
   pesquisar(filtro: PessoaFiltro): Promise<any> {
     let params = new HttpParams()

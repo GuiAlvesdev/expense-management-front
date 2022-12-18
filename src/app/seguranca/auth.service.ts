@@ -8,8 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
 
-  tokensRevokeUrl = environment.apiUrl + '/tokens/revoke';
-  oauthTokenUrl = environment.apiUrl + '/oauth/token'
+  tokensRevokeUrl = 'http://localhost:8080/tokens/revoke';
+  oauthTokenUrl = 'http://localhost:8080/oauth/token';
   jwtPayload: any;
 
   constructor(
