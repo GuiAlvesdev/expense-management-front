@@ -18,6 +18,7 @@ import { SegurancaModule } from './seguranca/seguranca.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    
 
     CoreModule,
     LancamentosModule,

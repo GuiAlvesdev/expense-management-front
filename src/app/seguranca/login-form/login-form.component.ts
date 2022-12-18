@@ -11,6 +11,7 @@ import { AuthService } from './../auth.service';
 })
 export class LoginFormComponent implements OnInit {
 
+
   constructor(
     private auth: AuthService,
     private errorHandler: ErrorHandlerService,
@@ -29,4 +30,6 @@ export class LoginFormComponent implements OnInit {
         this.errorHandler.handle(erro);
       });
   }
+
+  
 }

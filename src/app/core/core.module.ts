@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService, PrimeIcons } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToastModule } from 'primeng/toast';
 
@@ -34,6 +34,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   imports: [
     CommonModule,
     RouterModule,
+    
+    
 
     ToastModule,
     ConfirmDialogModule,
@@ -51,6 +53,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
     ToastModule,
     ConfirmDialogModule,
+    
+    
   ],
   providers: [
     DatePipe,
