@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { ErrorHandlerService } from 'src/app/core/error-handler.service';
-import { AuthService } from '../auth.service';
+import { AuthService } from './../auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -19,7 +20,6 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   login(usuario: string, senha: string) {
     this.auth.login(usuario, senha)
       .then(() => {
@@ -29,5 +29,4 @@ export class LoginFormComponent implements OnInit {
         this.errorHandler.handle(erro);
       });
   }
-
 }

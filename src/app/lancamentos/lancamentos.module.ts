@@ -1,47 +1,45 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
-import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TableModule } from 'primeng/table';
-import { CalendarModule } from 'primeng/calendar';
+
 import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
+
 import { SharedModule } from '../shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
+import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
+import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { LancamentosRoutingModule } from './lancamentos-routing.module';
 
-
-
 @NgModule({
-  declarations: [
-    LancamentoCadastroComponent,
-    LancamentosPesquisaComponent
-  ],
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
 
-    SharedModule,
-    LancamentosRoutingModule,
-
+    InputNumberModule,
     InputTextModule,
     ButtonModule,
     TableModule,
     TooltipModule,
-    InputNumberModule,
     InputTextareaModule,
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    CurrencyMaskModule
+
+    SharedModule,
+    LancamentosRoutingModule
+  ],
+  declarations: [
+    LancamentoCadastroComponent,
+    LancamentosPesquisaComponent
   ],
   exports: []
 })

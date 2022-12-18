@@ -1,8 +1,6 @@
 import { DatePipe } from '@angular/common';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
-
 import { Lancamento } from '../core/model';
 
 export class LancamentoFiltro {
@@ -60,7 +58,7 @@ export class LancamentoService {
   }
 
   adicionar(lancamento: Lancamento): Promise<Lancamento> {
-    return this.http.post< Lancamento | any >(this.lancamentosUrl, lancamento).toPromise();
+    return this.http.post<Lancamento>(this.lancamentosUrl, lancamento).toPromise();
   }
 
   atualizar(lancamento: Lancamento): Promise<Lancamento> {

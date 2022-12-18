@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
+
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { MessageService } from 'primeng/api';
+
 import { ErrorHandlerService } from 'src/app/core/error-handler.service';
-import { Lancamento } from 'src/app/core/model';
 import { PessoaService } from 'src/app/pessoas/pessoa.service';
-import { CategoriaService } from 'src/categorias/categoria.service';
 import { LancamentoService } from '../lancamento.service';
+import { CategoriaService } from './../../categorias/categoria.service';
+import { Lancamento } from './../../core/model';
 
 @Component({
   selector: 'app-lancamento-cadastro',
@@ -15,7 +18,7 @@ import { LancamentoService } from '../lancamento.service';
   styleUrls: ['./lancamento-cadastro.component.css']
 })
 export class LancamentoCadastroComponent implements OnInit {
-  
+
   lancamento: Lancamento = new Lancamento();
 
   categorias: any[] = [];

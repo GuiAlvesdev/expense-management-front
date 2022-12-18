@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/seguranca/auth.service';
-import { ErrorHandlerService } from '../error-handler.service';
+
+import { AuthService } from './../../seguranca/auth.service';
+import { ErrorHandlerService } from './../error-handler.service';
 
 @Component({
   selector: 'app-navbar',
@@ -34,5 +35,4 @@ export class NavbarComponent implements OnInit {
       })
       .catch(erro => this.errorHandler.handle(erro));
   }
-
 }

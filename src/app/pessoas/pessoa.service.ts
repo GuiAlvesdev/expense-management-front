@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { Pessoa } from '../core/model';
 
 export class PessoaFiltro {
@@ -56,16 +55,16 @@ export class PessoaService {
   }
 
   adicionar(pessoa: Pessoa): Promise<Pessoa> {
-    return this.http.post< Pessoa | any>(this.pessoasUrl, pessoa).toPromise();
-
+    return this.http.post<Pessoa>(this.pessoasUrl, pessoa)
+      .toPromise();
   }
 
   atualizar(pessoa: Pessoa): Promise<Pessoa> {
-    return this.http.put< Pessoa | any>(`${this.pessoasUrl}/${pessoa.codigo}`, pessoa).toPromise();
+    return this.http.put<Pessoa>(`${this.pessoasUrl}/${pessoa.codigo}`, pessoa).toPromise();
   }
 
   buscarPorCodigo(codigo: number): Promise<Pessoa> {
-    return this.http.get< Pessoa | any>(`${this.pessoasUrl}/${codigo}`).toPromise();
+    return this.http.get<Pessoa>(`${this.pessoasUrl}/${codigo}`).toPromise();
   }
 
 }

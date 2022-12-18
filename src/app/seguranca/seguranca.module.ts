@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LoginFormComponent } from './login-form/login-form.component';
-import { ButtonModule } from 'primeng/button';
-import { SegurancaRoutingModule } from './seguranca-routing.module';
-import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
-import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { MoneyHttpInterceptor } from './money-http-interceptor';
 import { AuthGuard } from './auth.guard';
-import { environment } from 'src/environments/environment';
+import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { MoneyHttpInterceptor } from './money-http-interceptor';
+import { SegurancaRoutingModule } from './seguranca-routing.module';
 
 export function tokenGetter(): string {
   return localStorage.getItem('token')!;
@@ -17,7 +18,6 @@ export function tokenGetter(): string {
 @NgModule({
   declarations: [
     LoginFormComponent
-
   ],
   imports: [
     CommonModule,

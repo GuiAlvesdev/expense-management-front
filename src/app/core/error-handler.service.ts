@@ -20,7 +20,6 @@ export class ErrorHandlerService {
       msg = errorResponse;
     } else if (errorResponse instanceof NotAuthenticatedError) {
       console.log('erro refresh');
-      
 
       msg = 'Sua sessão expirou!';
       this.router.navigate(['/login']);

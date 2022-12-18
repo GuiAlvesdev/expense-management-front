@@ -3,8 +3,8 @@ import { NgForm } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
-import { ErrorHandlerService } from 'src/app/core/error-handler.service';
-import { Pessoa } from 'src/app/core/model';
+import { ErrorHandlerService } from '../../core/error-handler.service';
+import { Pessoa } from '../../core/model';
 import { PessoaService } from '../pessoa.service';
 
 @Component({
@@ -91,7 +91,4 @@ export class PessoaCadastroComponent implements OnInit {
     this.title.setTitle(`Edição de pessoa: ${this.pessoa.nome}`);
   }
 
-  
 }
-
-
