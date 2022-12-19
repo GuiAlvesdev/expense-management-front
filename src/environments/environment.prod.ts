@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://mypersonalpiggybank.azurewebsites.net',
-  tokenAllowedDomains: [ /mypersonalpiggybank.azurewebsites.net/ ],
+  apiUrl: 'https://easy-financas.azurewebsites.net',
+  tokenAllowedDomains: [ /easy-financas.azurewebsites.net/ ],
   tokenDisallowedRoutes: [/\/oauth\/token/],
 };
