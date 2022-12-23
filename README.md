@@ -14,7 +14,12 @@
 
 <p>Este e o front-end do projeto em desenvolvimento utilizando angular 15/Typescript e a biblioteca de ui ng prime
 
-https://www.primefaces.org/primeng/ , para consumir a api desenvolvida em Java e seu framework spring, utilizando o angular em todo seu ecosistema e curva de aprendizado, utilizando conceitos como os components, rotas, autenticacao, guarda-de-rotas entre outras que o frameowork fornece, a mesma ainda esta em desenvolvimento, e novas atualizacoes virao em breve.
+https://www.primefaces.org/primeng/ , para consumir a api desenvolvida em Java e seu framework spring, utilizando o angular em todo seu ecosistema e curva de aprendizado, utilizando conceitos como os components, rotas, autenticacao, guarda-de-rotas entre outras que o frameowork fornece, a mesma ainda esta em desenvolvimento, e novas atualizacoes virao em breve.<p>
+
+<h3 align="center">Sobre o Projeto</h3>
+<p align="center">O Easy Financas trata-se de uma aplicacao Web onde voce pode fazer controle de depesas/receitas, onde o usuario pode possuir permissoes para cadastrar despesas e atribuir a mesma a alguem permissoes de super usuario, ou apenas um usuario com permissoes  visualizacao sem poder de editar ou adicionar despesas ou pessoas</p>
+
+<p align="center" >:nerd_face: Serao adicionados ao projeto futuramente, geracao de relatorios,graficos..</p>
 
 <h3 align="center">Tecnologias utilizadas </h3>
 <p align="center">
